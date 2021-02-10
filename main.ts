@@ -1,4 +1,4 @@
-namespace MSK_DFRobot_GamePad_NS
+namespace DFRobotGamePad
 {
     /**
     * Initialize the DFRobot GamePad driver extension.
