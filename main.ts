@@ -20,8 +20,8 @@ namespace DFRobotGamePad
     /**
     * Polls the status of the buttons A and B to see if either or both have been pressed
     */
-    //% BlockID = msk_dfrobot_gamepad_pollAB
-    //% block = "Poll GamePad Buttons AB $button_press_delay_msec"
+    //% BlockID=msk_dfrobot_gamepad_pollAB
+    //% block="Poll GamePad Buttons AB $button_press_delay_msec"
     export function poll_buttons_A_B (button_press_delay_msec: number)
     {
         if (input.buttonIsPressed(Button.AB)) {
@@ -63,8 +63,8 @@ namespace DFRobotGamePad
     /**
     * Polls the status of the buttons joystick to see if the X or Y have been actuated or the Z button pressed
     */
-    //% BlockID = msk_dfrobot_gamepad_pollJoyStick
-    //% block = "Poll GamePad Joystick $button_press_delay_msec"
+    //% BlockID=msk_dfrobot_gamepad_pollJoyStick
+    //% block="Poll GamePad Joystick $button_press_delay_msec"
     export function poll_joystick (button_press_delay_msec: number)
     {
         if (pins.digitalReadPin(DigitalPin.P8) == 0) {
@@ -133,8 +133,8 @@ namespace DFRobotGamePad
     /*
     * Polls the status of the colored buttons 
     */
-    //% BlockID = msk_dfrobot_gamepad_pollcoloredbuttons
-    //% block = "Poll GamePad Color Buttons $button_press_delay_msec"
+    //% BlockID=msk_dfrobot_gamepad_pollcoloredbuttons
+    //% block="Poll GamePad Color Buttons $button_press_delay_msec"
     export function gamepad_poll_color_buttons (button_press_delay_msec: number) {
         if (pins.digitalReadPin(DigitalPin.P15) == 0) {
             game_pad_output = "RED"
