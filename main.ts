@@ -1,11 +1,11 @@
 namespace MSK_DFRobot_GamePad_NS
 {
-    /*
+    /**
     * Initialize the DFRobot GamePad driver extension.
     * Include the Microbit Bluetooth Radio Group integer number
     */
-    //% BlockID = MSK_DFRobot_gamepad_initialize
-    //% block = "Initialize GamePad $radioGroup"
+    //% BlockID=msk_dfrobot_gamepad_initialize
+    //% block="Initialize GamePad $radioGroup"
     export function initialize_GamePad (radioGroup: number)
     {
         radio.setGroup(radioGroup)
