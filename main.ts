@@ -17,7 +17,7 @@ namespace DFRobotGamePad
         pins.setPull(DigitalPin.P2, PinPullMode.PullNone)
     }
 
-    /*
+    /**
     * Polls the status of the buttons A and B to see if either or both have been pressed
     */
     //% BlockID = msk_dfrobot_gamepad_pollAB
@@ -60,11 +60,11 @@ namespace DFRobotGamePad
         }
         basic.clearScreen()
     }
-    /*
+    /**
     * Polls the status of the buttons joystick to see if the X or Y have been actuated or the Z button pressed
     */
     //% BlockID = msk_dfrobot_gamepad_pollJoyStick
-    //% block = "Poll GamePad joystick $button_press_delay_msec"
+    //% block = "Poll GamePad Joystick $button_press_delay_msec"
     export function poll_joystick (button_press_delay_msec: number)
     {
         if (pins.digitalReadPin(DigitalPin.P8) == 0) {
