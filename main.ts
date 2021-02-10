@@ -5,7 +5,7 @@ namespace MSK_DFRobot_GamePad_NS
     * Include the Microbit Bluetooth Radio Group integer number
     */
     //% BlockID = msk_dfrobot_gamepad_initialize
-    //% block = "Initialize DFRobot GamePad"
+    //% block = "Initialize DFRobot GamePad for $radioGroup number"
     export function initialize_GamePad (radioGroup: number)
     {
         radio.setGroup(radioGroup)
@@ -21,7 +21,7 @@ namespace MSK_DFRobot_GamePad_NS
     * Polls the status of the buttons A and B to see if either or both have been pressed
     */
     //% BlockID = msk_dfrobot_gamepad_pollAB
-    //% block = "Poll DFRobot GamePad buttons A and B"
+    //% block = "Poll DFRobot GamePad buttons A and B.  $button_press_delay is delay (msec) after button press"
     export function poll_buttons_A_B (button_press_delay_msec: number)
     {
         if (input.buttonIsPressed(Button.AB)) {
