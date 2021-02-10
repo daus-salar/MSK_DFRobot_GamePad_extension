@@ -3,9 +3,9 @@ DFRobotGamePad.initialize_GamePad(1)
 
 for (let i = 0; i<1000; i++)
 {
-    MSK_DFRobot_GamePad_NS.poll_buttons_A_B(200)
+    DFRobotGamePad.poll_buttons_A_B(200)
 
-    MSK_DFRobot_GamePad_NS.poll_joystick(200)
+    DFRobotGamePad.poll_joystick(200)
 
     basic.pause(100)
 }
