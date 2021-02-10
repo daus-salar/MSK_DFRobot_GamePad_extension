@@ -21,7 +21,7 @@ namespace DFRobotGamePad
     * Polls the status of the buttons A and B to see if either or both have been pressed
     */
     //% BlockID = msk_dfrobot_gamepad_pollAB
-    //% block = "Poll GamePad $button_press_delay_msec"
+    //% block = "Poll GamePad Buttons AB $button_press_delay_msec"
     export function poll_buttons_A_B (button_press_delay_msec: number)
     {
         if (input.buttonIsPressed(Button.AB)) {
