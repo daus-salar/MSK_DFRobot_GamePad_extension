@@ -4,8 +4,8 @@ namespace MSK_DFRobot_GamePad_NS
     * Initialize the DFRobot GamePad driver extension.
     * Include the Microbit Bluetooth Radio Group integer number
     */
-    //% BlockID = msk_dfrobot_gamepad_initialize
-    //% block = "Initialize DFRobot GamePad for $radioGroup number"
+    //% BlockID = MSK_DFRobot_gamepad_initialize
+    //% block = "Initialize GamePad $radioGroup"
     export function initialize_GamePad (radioGroup: number)
     {
         radio.setGroup(radioGroup)
@@ -21,7 +21,7 @@ namespace MSK_DFRobot_GamePad_NS
     * Polls the status of the buttons A and B to see if either or both have been pressed
     */
     //% BlockID = msk_dfrobot_gamepad_pollAB
-    //% block = "Poll DFRobot GamePad buttons A and B.  $button_press_delay is delay (msec) after button press"
+    //% block = "Poll GamePad $button_press_delay_msec"
     export function poll_buttons_A_B (button_press_delay_msec: number)
     {
         if (input.buttonIsPressed(Button.AB)) {
@@ -64,7 +64,7 @@ namespace MSK_DFRobot_GamePad_NS
     * Polls the status of the buttons joystick to see if the X or Y have been actuated or the Z button pressed
     */
     //% BlockID = msk_dfrobot_gamepad_pollJoyStick
-    //% block = "Poll DFRobot GamePad joystick"
+    //% block = "Poll GamePad joystick $button_press_delay_msec"
     export function poll_joystick (button_press_delay_msec: number)
     {
         if (pins.digitalReadPin(DigitalPin.P8) == 0) {
@@ -134,7 +134,7 @@ namespace MSK_DFRobot_GamePad_NS
     * Polls the status of the colored buttons 
     */
     //% BlockID = msk_dfrobot_gamepad_pollcoloredbuttons
-    //% block = "Poll DFRobot GamePad Color Buttons"
+    //% block = "Poll GamePad Color Buttons $button_press_delay_msec"
     export function gamepad_poll_color_buttons (button_press_delay_msec: number) {
         if (pins.digitalReadPin(DigitalPin.P15) == 0) {
             game_pad_output = "RED"
