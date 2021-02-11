@@ -17,6 +17,23 @@ namespace DFRobotGamePad
         pins.setPull(DigitalPin.P2, PinPullMode.PullNone)
     }
 
+    export function poll_microbit_logo_button (button_delay_msec: number)
+    {
+        if (input.logoIsPressed()) {
+            game_pad_output = "LOGO"
+            radio.sendString(game_pad_output)
+            serial.writeLine(game_pad_output)
+            basic.showLeds(`
+                # # # # #
+                # . . . #
+                # . . . #
+                # . . . #
+                # # # # #
+                `)
+            basic.clearScreen()
+        }
+    }
+
     /**
     * Polls the status of the buttons A and B to see if either or both have been pressed
     */
@@ -25,6 +42,9 @@ namespace DFRobotGamePad
     export function poll_buttons_A_B (button_press_delay_msec: number)
     {
         if (input.buttonIsPressed(Button.AB)) {
+            game_pad_output = "AB"
+            radio.sendString(game_pad_output)
+            serial.writeLine(game_pad_output)
             basic.showLeds(`
                 # # # # #
                 # # # # #
@@ -34,9 +54,11 @@ namespace DFRobotGamePad
                 `)
             pins.digitalWritePin(DigitalPin.P12, 1)
             pins.setAudioPin(AnalogPin.P0)
+            basic.pause(button_press_delay_msec)
         } else if (input.buttonIsPressed(Button.A)) {
             game_pad_output = "A"
             radio.sendString(game_pad_output)
+            serial.writeLine(game_pad_output)
             basic.showLeds(`
                 . # # . .
                 # . . # .
@@ -44,9 +66,11 @@ namespace DFRobotGamePad
                 # . . # .
                 # . . # #
                 `)
+            basic.pause(button_press_delay_msec)
         } else if (input.buttonIsPressed(Button.B)) {
             game_pad_output = "B"
             radio.sendString(game_pad_output)
+            serial.writeLine(game_pad_output)
             basic.showLeds(`
                 # # # . .
                 # . . # .
