@@ -38,7 +38,43 @@ namespace DFRobotGamePad
     {
         let state;
         state = pins.digitalReadPin(DigitalPin.P15)
-        return (state == 1)
+        return (state == 0)
+    }
+
+    /**
+     * Checks to see if the Blue button is pressed 
+     */
+    //% BlockID=msk_dfrobot_gamepad_is_button_pressed_blue
+    //% block="GamePad is Blue button pressed?"
+    export function is_button_blue_pressed()
+    {
+        let state;
+        state = pins.digitalReadPin(DigitalPin.P16)
+        return (state == 0)
+    }
+
+    /**
+     * Checks to see if the Green button is pressed 
+     */
+    //% BlockID=msk_dfrobot_gamepad_is_button_pressed_blue
+    //% block="GamePad is Green button pressed?"
+    export function is_button_green_pressed()
+    {
+        let state;
+        state = pins.digitalReadPin(DigitalPin.P13)
+        return (state == 0)
+    }
+
+    /**
+     * Checks to see if the Yellow button is pressed 
+     */
+    //% BlockID=msk_dfrobot_gamepad_is_button_pressed_yellow
+    //% block="GamePad is Yellow button pressed?"
+    export function is_button_yellow_pressed()
+    {
+        let state;
+        state = pins.digitalReadPin(DigitalPin.P14)
+        return (state == 0)
     }
 
     /**
