@@ -7,5 +7,7 @@ for (let i = 0; i<1000; i++)
 
     DFRobotGamePad.poll_joystick(200)
 
+    DFRobotGamePad.poll_microbit_logo_button(200)
+
     basic.pause(100)
 }

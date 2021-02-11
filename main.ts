@@ -17,7 +17,34 @@ namespace DFRobotGamePad
         pins.setPull(DigitalPin.P2, PinPullMode.PullNone)
     }
 
-    export function poll_microbit_logo_button (button_delay_msec: number)
+    /**
+     * Turns on the vibramotor on 
+     */
+    //% BlockID=msk_dfrobot_gamepad_set_vibramotor_on
+    //% block="Set GamePad vibramotor on"
+    export function set_vibramotor_on()
+    { 
+        // Turn on vibramotor 
+        pins.digitalWritePin(DigitalPin.P12, 1)
+    }
+
+     /**
+     * Turns on the vibramotor off 
+     */
+    //% BlockID=msk_dfrobot_gamepad_set_vibramotor_off
+    //% block="Set GamePad vibramotor off"
+    export function set_vibramotor_off()
+    { 
+        // Turn on vibramotor 
+        pins.digitalWritePin(DigitalPin.P12, 0)
+    }
+
+    /**
+    * Polls the status of the Micro:bit logo button to see if it has been pressed
+    */
+    //% BlockID=msk_dfrobot_gamepad_poll_logo
+    //% block="Poll GamePad Buttons Logo $button_press_delay_msec"
+    export function poll_microbit_logo_button (button_press_delay_msec: number)
     {
         if (input.logoIsPressed()) {
             game_pad_output = "LOGO"
@@ -30,6 +57,7 @@ namespace DFRobotGamePad
                 # . . . #
                 # # # # #
                 `)
+            basic.pause(button_press_delay_msec)
             basic.clearScreen()
         }
     }
@@ -52,7 +80,9 @@ namespace DFRobotGamePad
                 # # # # #
                 # # # # #
                 `)
+            // Turn on vibramotor 
             pins.digitalWritePin(DigitalPin.P12, 1)
+            // Turn on buzzer
             pins.setAudioPin(AnalogPin.P0)
             basic.pause(button_press_delay_msec)
         } else if (input.buttonIsPressed(Button.A)) {
