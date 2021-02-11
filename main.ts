@@ -18,6 +18,30 @@ namespace DFRobotGamePad
     }
 
     /**
+     * Checks to see if the vibramotor is on 
+     */
+    //% BlockID=msk_dfrobot_gamepad_is_vibramotor_on
+    //% block="GamePad is vibramotor on?"
+    export function is_vibramotor_on()
+    {
+        let state;
+        state = pins.digitalReadPin(DigitalPin.P12)
+        return (state == 1)
+    }
+    
+    /**
+     * Checks to see if the Red button is pressed 
+     */
+    //% BlockID=msk_dfrobot_gamepad_is_button_pressed_red
+    //% block="GamePad is Red button pressed?"
+    export function is_button_red_pressed()
+    {
+        let state;
+        state = pins.digitalReadPin(DigitalPin.P15)
+        return (state == 1)
+    }
+
+    /**
      * Turns on the vibramotor on 
      */
     //% BlockID=msk_dfrobot_gamepad_set_vibramotor_on
