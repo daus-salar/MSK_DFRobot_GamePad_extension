@@ -33,7 +33,7 @@ namespace DFRobotGamePad
      * Checks to see if the Red button is pressed 
      */
     //% BlockID=msk_dfrobot_gamepad_is_button_pressed_red
-    //% block="GamePad is Red button pressed?"
+    //% block="GamePad ist Roter Knopf gedrückt?"
     export function is_button_red_pressed()
     {
         let state;
@@ -45,7 +45,7 @@ namespace DFRobotGamePad
      * Checks to see if the Blue button is pressed 
      */
     //% BlockID=msk_dfrobot_gamepad_is_button_pressed_blue
-    //% block="GamePad is Blue button pressed?"
+    //% block="GamePad ist Blauer Knopf gedrückt?"
     export function is_button_blue_pressed()
     {
         let state;
@@ -57,7 +57,7 @@ namespace DFRobotGamePad
      * Checks to see if the Green button is pressed 
      */
     //% BlockID=msk_dfrobot_gamepad_is_button_pressed_blue
-    //% block="GamePad is Green button pressed?"
+    //% block="GamePad ist Grüner Knopf gedrückt?"
     export function is_button_green_pressed()
     {
         let state;
@@ -69,7 +69,7 @@ namespace DFRobotGamePad
      * Checks to see if the Yellow button is pressed 
      */
     //% BlockID=msk_dfrobot_gamepad_is_button_pressed_yellow
-    //% block="GamePad is Yellow button pressed?"
+    //% block="GamePad ist Gelber Knopf gedrückt?"
     export function is_button_yellow_pressed()
     {
         let state;
@@ -81,7 +81,7 @@ namespace DFRobotGamePad
      * Turns on the vibramotor on 
      */
     //% BlockID=msk_dfrobot_gamepad_set_vibramotor_on
-    //% block="Set GamePad vibramotor on"
+    //% block="Schalte Vibration an"
     export function set_vibramotor_on()
     { 
         // Turn on vibramotor 
@@ -92,7 +92,7 @@ namespace DFRobotGamePad
      * Turns on the vibramotor off 
      */
     //% BlockID=msk_dfrobot_gamepad_set_vibramotor_off
-    //% block="Set GamePad vibramotor off"
+    //% block="Schalte Vibration aus"
     export function set_vibramotor_off()
     { 
         // Turn on vibramotor 
@@ -103,7 +103,7 @@ namespace DFRobotGamePad
     * Polls the status of the Micro:bit logo button to see if it has been pressed
     */
     //% BlockID=msk_dfrobot_gamepad_poll_logo
-    //% block="Poll GamePad Buttons Logo $button_press_delay_msec"
+    //% block="Frage GamePad Knopf Logo ab $button_press_delay_msec"
     export function poll_microbit_logo_button (button_press_delay_msec: number)
     {
         if (input.logoIsPressed()) {
@@ -126,7 +126,7 @@ namespace DFRobotGamePad
     * Polls the status of the buttons A and B to see if either or both have been pressed
     */
     //% BlockID=msk_dfrobot_gamepad_pollAB
-    //% block="Poll GamePad Buttons AB $button_press_delay_msec"
+    //% block="Frage GamePad Knöpfe AB ab $button_press_delay_msec"
     export function poll_buttons_A_B (button_press_delay_msec: number)
     {
         if (input.buttonIsPressed(Button.AB)) {
@@ -178,7 +178,7 @@ namespace DFRobotGamePad
     * Polls the status of the buttons joystick to see if the X or Y have been actuated or the Z button pressed
     */
     //% BlockID=msk_dfrobot_gamepad_pollJoyStick
-    //% block="Poll GamePad Joystick $button_press_delay_msec"
+    //% block="Frage GamePad Joystick ab $button_press_delay_msec"
     export function poll_joystick (button_press_delay_msec: number)
     {
         if (pins.digitalReadPin(DigitalPin.P8) == 0) {
@@ -248,7 +248,7 @@ namespace DFRobotGamePad
     * Polls the status of the colored buttons 
     */
     //% BlockID=msk_dfrobot_gamepad_pollcoloredbuttons
-    //% block="Poll GamePad Color Buttons $button_press_delay_msec"
+    //% block="Frage GamePad Farb Knöpfe ab $button_press_delay_msec"
     export function gamepad_poll_color_buttons (button_press_delay_msec: number) {
         if (pins.digitalReadPin(DigitalPin.P15) == 0) {
             game_pad_output = "RED"
